@@ -3,14 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>صفحتي</title>
+  <title>محمد | صفحتي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 0 16px; }
+    /* 🎨 غيّر الألوان من هنا */
+    :root {
+      --main: #6c5ce7;      /* اللون الأساسي */
+      --second: #00cec9;    /* اللون الثاني */
+      --bg: #f5f6fa;        /* لون الخلفية */
+      --card: #ffffff;      /* لون البطاقات */
+      --text: #2d3436;      /* لون الكتابة */
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--main), var(--second));
+      color: white;
+      text-align: center;
+      padding: 70px 20px 90px;
+    }
+
+    .avatar {
+      font-size: 64px;
+      width: 120px; height: 120px;
+      line-height: 120px;
+      margin: 0 auto 16px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+    }
+
+    header h1 { font-size: 40px; font-weight: 800; }
+    header p  { font-size: 18px; opacity: 0.9; }
+
+    main {
+      max-width: 800px;
+      margin: -50px auto 40px;
+      padding: 0 16px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .card h2 {
+      color: var(--main);
+      margin-bottom: 12px;
+    }
+
+    .hobbies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+    }
+
+    .hobby {
+      background: var(--bg);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      font-weight: 700;
+      transition: transform 0.2s;
+    }
+    .hobby:hover { transform: translateY(-4px); }
+    .hobby span { display: block; font-size: 32px; }
+
+    .btn {
+      display: inline-block;
+      background: var(--main);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #999;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
-  <h1>هلا، أنا Bo Aziz 👋</h1>
-  <p>هذي أول صفحة أسويها  .</p>
-  <p/>ترقب يا عبيد شغلي<p.
+
+  <header>
+    <div class="avatar">😎</div>
+    <h1>هلا والله، انا بوعزيز </h1>
+    <p> البرمجة وأجرب GitHub   🚀</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>👋 نبذة عني</h2>
+      <p>اصمم مواقع حق الي يبي .</p>
+    </section>
+
+    <section class="card">
+      <h2>⭐ هواياتي</h2>
+      <div class="hobbies">
+        <div class="hobby"><span>🏐</span>كرة الطائرة</div>
+        <div class="hobby"><span>🎮</span>الألعاب</div>
+        <div class="hobby"><span>❤️‍🔥</span>العب بيليرد</div>
+        <div class="hobby"><span>✈️</span>السفر</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>📬 تواصل معي</h2>
+      <p style="margin-bottom:16px">تقدر تشوف مشاريعي على GitHub:</p>
+      <a class="btn" href="https://github.com/mohamadhanialja95-beep">حسابي على GitHub</a>
+    </section>
+  </main>
+
+  <footer>صُنعت بـ ❤️    </footer>
+
 </body>
 </html>
